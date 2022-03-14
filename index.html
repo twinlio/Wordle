@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Recreation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vars.js"></script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="game">
+        <div id="top" class="guess-board">
+            <div class="popup">
+                <span class="popup popuptext" id="myPopup"></span>
+            </div>
+            <div class="gamerows">
+                <div class="game-row" id="game-row-1">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-1-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-1-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-1-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-1-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-1-5"> </span>
+                </div>
+                <div class="game-row" id="game-row-2">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-2-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-2-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-2-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-2-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-2-5"> </span>
+                </div>
+                <div class="game-row" id="game-row-3">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-3-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-3-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-3-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-3-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-3-5"> </span>
+                </div>
+                <div class="game-row" id="game-row-4">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-4-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-4-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-4-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-4-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-4-5"> </span>
+                </div>
+                <div class="game-row" id="game-row-5">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-5-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-5-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-5-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-5-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-5-5"> </span>
+                </div>
+                <div class="game-row" id="game-row-6">
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-6-1"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-6-2"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-6-3"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-6-4"> </span>
+                    <span class="game-tile" data-state='empty' tile-animation="idle" id="tile-6-5"> </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="keyboard">
+            <div style="display: inline-block;" class="keyboard-row" id="keyboard_q-w">
+                <button class="keyboard-button" id="keyboard-button-q" onclick='addletter("q")'>Q</button>
+                <button class="keyboard-button" id="keyboard-button-w" onclick='addletter("w")'>W</button>
+                <button class="keyboard-button" id="keyboard-button-e" onclick='addletter("e")'>E</button>
+                <button class="keyboard-button" id="keyboard-button-r" onclick='addletter("r")'>R</button>
+                <button class="keyboard-button" id="keyboard-button-t" onclick='addletter("t")'>T</button>
+                <button class="keyboard-button" id="keyboard-button-y" onclick='addletter("y")'>Y</button>
+                <button class="keyboard-button" id="keyboard-button-u" onclick='addletter("u")'>U</button>
+                <button class="keyboard-button" id="keyboard-button-i" onclick='addletter("i")'>I</button>
+                <button class="keyboard-button" id="keyboard-button-o" onclick='addletter("o")'>O</button>
+                <button class="keyboard-button" id="keyboard-button-p" onclick='addletter("p")'>P</button>
+            </div>
+                <p style="height:0px;"></p>
+            <div style="display: inline-block;" class="keyboard-row" id="keyboard_a-l">
+                <button class="keyboard-button" id="keyboard-button-a" onclick='addletter("a")'>A</button>
+                <button class="keyboard-button" id="keyboard-button-s" onclick='addletter("s")'>S</button>
+                <button class="keyboard-button" id="keyboard-button-d" onclick='addletter("d")'>D</button>
+                <button class="keyboard-button" id="keyboard-button-f" onclick='addletter("f")'>F</button>
+                <button class="keyboard-button" id="keyboard-button-g" onclick='addletter("g")'>G</button>
+                <button class="keyboard-button" id="keyboard-button-h" onclick='addletter("h")'>H</button>
+                <button class="keyboard-button" id="keyboard-button-j" onclick='addletter("j")'>J</button>
+                <button class="keyboard-button" id="keyboard-button-k" onclick='addletter("k")'>K</button>
+                <button class="keyboard-button" id="keyboard-button-l" onclick='addletter("l")'>L</button>
+            </div>
+                <p style="height:0px;"></p>
+            <div style="display: inline-block;" class="keyboard-row" id="keyboard_enter-delete">
+                <button class="keyboard-button" id="keyboard-button-enter" onclick='addletter("Enter")'>Enter</button>
+                <button class="keyboard-button" id="keyboard-button-z" onclick='addletter("z")'>Z</button>
+                <button class="keyboard-button" id="keyboard-button-x" onclick='addletter("x")'>X</button>
+                <button class="keyboard-button" id="keyboard-button-c" onclick='addletter("c")'>C</button>
+                <button class="keyboard-button" id="keyboard-button-v" onclick='addletter("v")'>V</button>
+                <button class="keyboard-button" id="keyboard-button-b" onclick='addletter("b")'>B</button>
+                <button class="keyboard-button" id="keyboard-button-n" onclick='addletter("n")'>N</button>
+                <button class="keyboard-button" id="keyboard-button-m" onclick='addletter("m")'>M</button>
+                <button class="keyboard-button" id="keyboard-button-backspace" onclick='addletter("Backspace")'>⌦</button>
+
+              </div>
+        </div>
+    </div>
+</body>
+</html>
