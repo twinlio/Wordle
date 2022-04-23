@@ -1,3 +1,4 @@
+
 var current_row = 1;
 var current_letter = 0;
 

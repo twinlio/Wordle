@@ -1,3 +1,4 @@
+
 var possible_words = ["cigar",
 "rebut",
 "sissy",
